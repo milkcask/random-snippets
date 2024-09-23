@@ -3,8 +3,7 @@ import GenericV1ApiRequest from 'foo';
 
 export type FetchParseWithReviverOptions = {
     reviver?: Parameters<JSON["parse"]>[1] | null;
-    statusHandler?: Record<string, (response: Response) => any | undefined>;
-    clientErrorHandler?: (response: Response) => any;
+    statusHandler?: Record<string | number , (response: Response) => any | undefined>;
 };
 
 /**
